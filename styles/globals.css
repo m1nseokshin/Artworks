@@ -319,7 +319,8 @@ body, html {
   
   .main-link{
     margin-top: 8vh;
-    height: 80%;
+    height: 70%;
+    overflow: hidden;
   }
 
   .about-img img{
