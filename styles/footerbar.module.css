@@ -1,0 +1,42 @@
+.footercontainer{
+    position: absolute;
+    bottom: 1px;
+    display: flex;
+    width: 90%;
+    height: 40px;
+    margin-right: 5%;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footertext{
+    font-size: 13px;
+}
+
+.copyright{
+    font-size: 13px;
+}
+
+@media (max-width:750px) {
+
+    .footercontainer{
+        flex-direction: column;
+        justify-content: center;
+        line-height: 15px;
+        bottom: 3px;
+    }
+  
+    .footertext{
+      font-size: 10px;
+      justify-content: center;
+      text-align: center;
+  
+    }
+
+    .copyright{
+        font-size: 10px;
+        justify-content: center;
+        text-align: center; 
+    }
+}
