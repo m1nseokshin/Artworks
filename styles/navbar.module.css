@@ -28,9 +28,10 @@
 .menus{
     position: relative;
     display: flex;
+    float: right;
     flex-direction: row;
     justify-content: center;
-    margin-left: 65%;
+    margin-left: 60%;
     z-index: 300;
 }
 
@@ -41,12 +42,41 @@
     font-size: 15px;
     color: #707070;
     z-index: 300;
+    display: inline-block; /* 크기 변화를 위해 inline-block 권장 */
+    transition: transform 0.5s ease, font-weight 0.5s ease;
+    font-weight: 400; /* 기본 두께가 400이라고 가정 */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu:hover {
+  /* 마우스 호버 시 상태 */
+  transform: scale(1.08);
+  font-weight: 1000; /* 200정도 두꺼워짐 (400 -> 600) */
+    transition: 0.5s;
 }
 
 .instagram{
+    margin-top: 30%;
     width: 30px;
     height: 30px;
     z-index: 300;
+    transition: 0.5s;
+
+}
+
+.instagram:hover {
+  /* 마우스 호버 시 상태 */
+  transform: scale(1.08);
+  font-weight: 1000; /* 200정도 두꺼워짐 (400 -> 600) */
+    transition: 0.5s;
+}
+
+@media (max-width:1400px) {
+    .menus{
+        margin-left: 45%;
+    }
+    
 }
 
 

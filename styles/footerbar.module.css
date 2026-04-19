@@ -1,6 +1,6 @@
 .footercontainer{
-    position: absolute;
-    bottom: 1px;
+    position: relative;
+    bottom: 2px;
     display: flex;
     width: 90%;
     height: 40px;
@@ -16,6 +16,7 @@
 
 .copyright{
     font-size: 13px;
+    float: right;
 }
 
 @media (max-width:750px) {

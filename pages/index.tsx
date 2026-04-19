@@ -1,16 +1,13 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+import Link from 'next/link'; // 1. Link 컴포넌트 추가
 import React from 'react';
 
 // @ts-ignore
 import Main from '@/public/video/main.mp4';
 
 export default function Home() {
-  const [open, setOpen] = React.useState(false);
+  // 이제 클릭 시 이동하므로 기존의 Lightbox 관련 상태(open)는 필요 없습니다.
 
-  
   return (
     <>
       <Head>
@@ -18,19 +15,22 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <div className='main-container'>
-        <div  className='main-link' onClick={() => setOpen(true)}>
-          <video loop={true} autoPlay={true} muted playsInline poster='/3dartworks/0.png' className="main" src={ Main }></video>
+        {/* 2. 기존의 onClick 이벤트를 제거하고 Link로 감싸서 이동하도록 수정 */}
+        <Link href="/artworks" className='main-link' style={{ textDecoration: 'none' }}>
+          <video 
+            loop={true} 
+            autoPlay={true} 
+            muted 
+            playsInline 
+            poster='/3dartworks/0.jpg' 
+            className="main" 
+            src={ Main }
+          ></video>
           <div className='main-title'>MINSEOK SHIN PRESENTS.</div>
-        </div>
+        </Link>
       </div>
-
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        slides={[{ src: "/3dartworks/0.jpg" }, { src: "/3dartworks/1.jpg" }, { src: "/3dartworks/2.jpg" }, { src: "/3dartworks/3.jpg" }, { src: "/3dartworks/4.jpg" }, { src: "/3dartworks/5.jpg" }, { src: "/3dartworks/6.jpg" }, { src: "/3dartworks/7.jpg" }, { src: "/3dartworks/8.jpg" }, { src: "/3dartworks/9.jpg" }, { src: "/3dartworks/10.jpg" }, { src: "/3dartworks/11.jpg" }]}
-      />
-
     </>
   )
 }

@@ -86,6 +86,7 @@ export default function Navbar() {
           <div className={styles.menus}>
             <Link href="/" className={styles.menu}>HOME</Link>
             <Link href="/about" className={styles.menu}>ABOUT</Link>
+            <Link href="/artworks" className={styles.menu}>ARTWORKS</Link>
           </div>
           <Link href="https://www.instagram.com/xx_xstyles">
             <Image className={styles.instagram} src={Instagram} alt="Instagram" priority></Image>
@@ -112,6 +113,12 @@ export default function Navbar() {
                   onClick={() => router.push('/about')}
                 >
                   ABOUT
+                </a>
+                <a
+                  className="menu"
+                  onClick={() => router.push('/artworks')}
+                >
+                  ARTWORKS
                 </a>
                 <a
                   className="menu"

@@ -22,6 +22,13 @@ body, html {
   background-color: #f1f1f1;
   color: #707070;
   line-height: 30px;
+  scroll-behavior: smooth;
+}
+
+.yarl__container {
+  background-color: ghostwhite;
+  filter: blur(0px);
+
 }
 
 /* 텍스트 전역 설정 */
@@ -237,6 +244,7 @@ body, html {
   margin-right: 10%;
   top: 15vh;
   align-items: center;
+  margin-bottom: 60vh;
 }
 
 .about-text{
@@ -273,6 +281,39 @@ body, html {
 
 .img:hover{
   filter: invert(16%) sepia(89%) saturate(3054%) hue-rotate(358deg) brightness(97%) contrast(113%);
+  transition: 0.5s;
+}
+
+
+/* Artowrks.tsx */
+
+.artworks-container{
+  position: relative;
+  top: 130px;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-wrap: wrap;
+  margin-bottom: 400px;
+  justify-content: center;
+}
+
+.artworks-item{
+  flex-basis: 300px;
+  width: 33%;
+  height: 30%;
+  object-fit: cover;
+}
+
+.artworks-item{
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.artworks-item:hover{
+  transform: scale(1.05);
   transition: 0.5s;
 }
 
@@ -330,6 +371,7 @@ body, html {
 
   .about{
     align-items: start;
+    margin-bottom: 48vh;
   }
 
   .title-left{
@@ -344,4 +386,25 @@ body, html {
     font-size: 13px;
   }
   
+}
+
+/* @/styles/globals.css */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }

@@ -22,10 +22,11 @@ export default function Home() {
           <div className='about-text'>
             <div className='title-left'>PROFILE</div>
             <div className='subtitle-left'>
-              NAME: MINSEOK SHIN<br />
-              MAJOR: DIGITAL DESIGN<br />
-              INTERESTS: WEB DEVELOPMENT, WEB DESIGN, 3D DESIGN<br />
-              TOOLS: BLENDER, 3DSMAX, UNITY<br />
+              <h2>Minseok Shin</h2>
+              Pusan National Univ. Design and Technology<br />
+              Korea Design Membership Plus 7<br />
+              Interests: HCI, Universal Design, Web Development<br />
+              <br />
             </div>
             <div className='contact'>
               <div className='subtitle-left'>CONTACTS</div>
